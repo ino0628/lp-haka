@@ -48,10 +48,11 @@ h2{font-size:19px;margin:0 0 12px;padding-left:10px;border-left:4px solid var(--
 .risk-box{background:#fff4f2;border:2px solid #e24b3b;border-radius:14px;padding:18px 18px 12px;margin:10px 0 6px}
 .risk-box h2{border-left-color:#e24b3b;color:#b42318;font-size:21px}
 .risk-cards{display:grid;gap:10px;margin:12px 0 6px}
-.risk-card{background:#fff;border:1px solid #f3c6c0;border-radius:10px;padding:12px 14px;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:center}
-.risk-card .big{font-size:22px;font-weight:800;color:#b42318;line-height:1.2;white-space:nowrap;grid-row:span 2}
-.risk-card b{display:block;font-size:15px}
-.risk-card span{font-size:14px;color:var(--sub)}
+.risk-card{background:#fff;border:1px solid #f3c6c0;border-radius:10px;padding:12px 14px}
+.risk-card .big{display:block;font-size:20px;font-weight:800;color:#b42318;line-height:1.25;margin:0 0 4px}
+.risk-card b{display:block;font-size:15px;margin:0 0 2px}
+.risk-card span{display:block;font-size:14px;color:var(--sub);line-height:1.6}
+@media (min-width:600px){.risk-card{display:grid;grid-template-columns:9em 1fr;gap:2px 14px;align-items:center}.risk-card .big{grid-row:span 2;font-size:22px;margin:0}}
 .risk-close{margin:10px 0 0;font-size:14px;color:#7a271a;font-weight:700}
 .dialogs{display:grid;gap:14px;margin:10px 0 6px}
 .dialog{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
@@ -96,7 +97,7 @@ details p{margin:8px 0 0;color:var(--sub);font-size:15px}
 ol.steps{padding-left:20px;margin:0}
 ol.steps li{margin:8px 0}
 ol.steps small{display:block;color:var(--sub);font-size:13px}
-.cta-inline{margin:6px 0 4px;text-align:center}
+.cta-inline{margin:14px 0 22px;text-align:center}
 .cta-inline .cta{display:block}
 form{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px}
 label{display:block;font-weight:700;margin:12px 0 4px}
@@ -153,7 +154,6 @@ body.has-sticky{padding-bottom:72px}
 <h2>こんなことで止まっていませんか</h2>
 <ul class="checks"><li>承継する人がいない</li><li>遠くて手入れに行けない</li><li>お寺にどう切り出せばいいか分からない</li><li>離檀料がいくら請求されるか怖い</li><li>遺骨の行き先が決まっていない</li><li>家族の意見がまとまらない</li></ul>
 </section>
-<div class="cta-inline"><a class="cta" href="#form">無料で見積を手配する</a></div>
 
 <section class="risk-box">
 <h2>先送りにすると、こうなります</h2>
@@ -169,6 +169,7 @@ body.has-sticky{padding-bottom:72px}
 
 <section class="trust"><h2>私たちは、石材店ではありません。だから、あなたの側に立てます。</h2><p class="lead">くらしの案内所は、お墓を撤去する会社でも、納骨先を売る会社でもありません。あなたの事情を先に伺って、順番を一緒に決め、新潟の石材店に橋渡しをする窓口です。紹介して終わりではなく、連絡が来たか、見積が説明どおりか、断ったあとに連絡が止まったかまで確認します。</p><h3>5つのお約束</h3><ol class="promises"><li><b>しつこい営業はさせません</b><span>対応する石材店と、営業電話を繰り返さない取り決めをしています。信頼できる実績のある石材店しか紹介しません。</span></li><li><b>見積は必ず明細で</b><span>撤去・整地・閉眼供養・運搬など、何にいくらかかるかが分かる形でお渡しします。「一式」だけの見積は受け取りません。</span></li><li><b>断っても、費用も理由もいりません</b><span>見積を見て合わなければ、そのまま断って構いません。当社への費用はかかりません。</span></li><li><b>見積は、最大3社から</b><span>どの石材店から連絡が来るかは、事前にお伝えします。それ以外から連絡が行くことはありません。</span></li><li><b>納骨が終わるまで、窓口は同じです</b><span>お寺への切り出し方の例文、改葬許可の書類、納骨先の選び方。分からないことは、いつでも聞いてください。</span></li></ol><h3>ご紹介する石材店の基準</h3><ul class="criteria"><li>新潟県内に拠点があり、お墓の場所をすぐ見に行ける</li><li>撤去だけでなく、閉眼供養の手配と改葬許可の書類の案内まで対応する</li><li>明細のある見積を出す。追加費用は事前に説明する</li><li>「しつこい営業をしない」「断られたら連絡しない」の取り決めに同意している</li></ul><h3>事務局より</h3><div class="message"><p>お墓の話は、費用より先に、気持ちの整理が要ります。「申し訳ない」という気持ちのまま何年も止まってしまう方が、いちばん多い。</p><p>墓じまいは、供養をやめることではなく、手の届く場所で続けるための引っ越しです。お寺にどう言うか、遺骨をどこへ移すか、いくらかかるか。順番を一緒に決めて、地元の石材店につなぎ、納骨が終わるまで同じ窓口でお付き合いします。</p><p class="sign">くらしの案内所事務局</p></div></section>
 
+<div class="cta-inline"><a class="cta" href="#form">無料で見積を手配する</a></div>
 
 <section>
 <h2>墓じまい案内所でできること</h2>
@@ -181,7 +182,6 @@ body.has-sticky{padding-bottom:72px}
 <ul class="facts"><li>総額の相場は35万〜150万円。差がつくのは上の3つです</li></ul><div class="cards" style="margin-top:12px"><div class="card"><b>① 墓石の撤去・整地</b><div class="range">90×90cmで9.9万円〜・1㎡あたり10万〜12万円〜</div><div class="note">区画の広さ・墓石の大きさ・重機が入るかで変わる。ここが見積の大半。県内の石材店の下限価格の例です</div></div><div class="card"><b>② 手続き（改葬許可・お寺への連絡）</b><div class="range">数千円〜。離檀料は寺による</div><div class="note">改葬許可証は市町村役場で。お寺には先に相談を。離檀料は法律で決まった額はない</div></div><div class="card"><b>③ 新しい納骨先</b><div class="range">樹木葬は平均約70万円・合祀型の永代供養墓は数万円〜</div><div class="note">鎌倉新書の2026年の調査で樹木葬の平均購入金額は71.7万円。ここを先に決めないと総額が決まらない。実家の近くか、今お住まいの近くか</div></div></div>
 <p class="note">金額は一般的な目安です。実際の費用は現地の見積で確定します。</p>
 </section>
-<div class="cta-inline"><a class="cta" href="#form">無料で見積を手配する</a></div>
 
 <section>
 <h2>よくあるお悩み</h2>
@@ -189,7 +189,6 @@ body.has-sticky{padding-bottom:72px}
 <div class="voices"><div class="voice"><div class="av"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 22c0-9 5-15 12-15s12 6 12 15v7H12z" fill="#8a96a3"/><circle cx="24" cy="18" r="8" fill="#b8c2cc"/><path d="M6 48c0-11 8-17 18-17s18 6 18 17z" fill="#9aa5b1"/></svg></div><div><p class="who">60代・東京在住</p><p>遠くて年に一度も行けません。荒れていくお墓を見るたびに申し訳なくて。でもお寺にどう切り出せばいいのか分からず、何年もそのままです。</p></div></div><div class="voice"><div class="av"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="17" r="9" fill="#9aa5b1"/><path d="M6 48c0-11 8-17 18-17s18 6 18 17z" fill="#9aa5b1"/></svg></div><div><p class="who">70代・新潟市在住</p><p>跡を継ぐ人がいません。自分の代で整理しておきたいけれど、費用がいくらかかるのか見当がつかない。</p></div></div><div class="voice"><div class="av"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 22c0-9 5-15 12-15s12 6 12 15v7H12z" fill="#8a96a3"/><circle cx="24" cy="18" r="8" fill="#b8c2cc"/><path d="M6 48c0-11 8-17 18-17s18 6 18 17z" fill="#9aa5b1"/></svg></div><div><p class="who">50代・長岡市在住</p><p>離檀料を高く請求されたという話を聞いて怖くなりました。相場を知ったうえで、ちゃんとした石材店に頼みたい。</p></div></div><div class="voice"><div class="av"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="17" r="9" fill="#9aa5b1"/><path d="M6 48c0-11 8-17 18-17s18 6 18 17z" fill="#9aa5b1"/></svg></div><div><p class="who">60代・県外在住</p><p>遺骨の行き先が決まっていません。永代供養と樹木葬の違いも、費用の幅もよく分からないまま止まっています。</p></div></div></div>
 <p class="note">※お悩みの例です。個人が特定される内容は含みません。</p>
 </section>
-<div class="cta-inline"><a class="cta" href="#form">無料で見積を手配する</a></div>
 
 <section>
 <h2>流れ（3つ）</h2>
@@ -207,7 +206,6 @@ body.has-sticky{padding-bottom:72px}
 <h2>よくある質問</h2>
 <details><summary>費用の総額はいくらですか</summary><p>撤去・手続き・新しい納骨先の3つの合計で、相場は35万〜150万円です。撤去は区画の広さ、納骨先は選ぶ形で大きく変わります。</p></details><details><summary>期間はどれくらいですか</summary><p>お寺への相談から納骨まで、2〜3か月が目安です。改葬許可の申請と納骨先の手配に時間がかかります。</p></details><details><summary>離檀料はいくら払うものですか</summary><p>法律で決まった額はありません。相場は数万円〜20万円ほどと言われています。高額な請求に応じる義務はなく、まず丁寧に相談するのが近道です。</p></details><details><summary>お寺にどう切り出せばいいですか</summary><p>「遠方で管理が難しくなり、供養を続けられる形に変えたい」と、先に相談の形で伝えます。例文をお渡しします。</p></details><details><summary>改葬許可の手続きは代行してもらえますか</summary><p>当社は代行しません（有償の代理は行政書士の業務です）。必要書類の一覧と役場の窓口はお伝えします。</p></details><details><summary>遺骨の行き先が決まっていなくても相談できますか</summary><p>できます。納骨先の費用の幅と選び方から一緒に整理します。納骨先が決まらないと撤去は進められません。</p></details><details><summary>現地に行かなくても進められますか</summary><p>多くの場合、区画サイズと写真で概算の見積ができます。立会いが必要な場面は石材店から事前にご相談します。</p></details><details><summary>見積は何社から取れますか</summary><p>最大3社まで。どの石材店から連絡が来るかは事前にお伝えします。まず1社からの連絡で、必要なら追加します。</p></details><details><summary>費用は本当にかかりませんか</summary><p>当社への費用はかかりません。当社は対応した石材店から紹介料を受け取ることがあります。お客様が払うのは、実際に依頼した撤去や納骨先の費用だけです。</p></details><details><summary>断ってもいいですか</summary><p>もちろんです。見積を見て納得できなければ、断って構いません。費用はかかりません。</p></details>
 </section>
-<div class="cta-inline"><a class="cta" href="#form">無料で見積を手配する</a></div>
 
 <section id="form">
 <h2>無料で見積を手配する</h2>
