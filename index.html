@@ -102,6 +102,20 @@ h2{font-size:19px;margin:0 0 12px;padding-left:10px;border-left:4px solid var(--
 .voice .av svg{display:block;width:100%;height:100%}
 .voice .who{font-size:13px;color:var(--sub);margin:0 0 4px}
 .voice p{margin:0;font-size:15px}
+.cmp{margin:14px 0 12px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px}
+.cmp-t{font-size:18px;font-weight:700;margin:0 0 6px;text-align:center;line-height:1.5}
+.cmp-lead{font-size:15px;color:var(--sub);margin:0 0 12px;text-align:center}
+.cmp-head{display:none}
+.cmp-row{border-top:1px solid var(--line);padding:12px 0;display:grid;gap:8px}
+.cmp-k{font-weight:700;font-size:15px}
+.cmp-a,.cmp-b{font-size:14px;line-height:1.6;padding:8px 10px;border-radius:8px;margin:0}
+.cmp-a{background:#f3f4f6;color:var(--sub)}
+.cmp-b{background:var(--soft);color:var(--ink)}
+.cmp-a i,.cmp-b i{display:block;font-style:normal;font-size:12px;font-weight:700;margin-bottom:2px}
+.cmp-a i{color:#8a94a0}
+.cmp-b i{color:var(--accent)}
+.cmp-close{margin:12px 0 0;font-weight:700;text-align:center;font-size:15px;line-height:1.6}
+@media (min-width:600px){.cmp-head{display:grid;grid-template-columns:7.5em 1fr 1fr;gap:10px;font-size:13px;font-weight:700;padding:0 0 8px}.cmp-head .c1{color:#8a94a0;padding:0 10px}.cmp-head .c2{color:var(--accent);padding:0 10px}.cmp-row{grid-template-columns:7.5em 1fr 1fr;gap:10px;align-items:stretch}.cmp-a i,.cmp-b i{display:none}}
 .tbl{width:100%;border-collapse:collapse;font-size:14px;background:#fff}
 .tbl th,.tbl td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
 .tbl th{background:var(--soft);white-space:nowrap}
@@ -198,8 +212,8 @@ body.has-sticky{padding-bottom:72px}
 
 <section>
 <h2>費用の内訳（差がつく3つ）</h2>
-<div class="money-lead"><p>先に内訳を知っておくと、避けられる損があります</p><ul><li>「一式」の見積は、相場より高くても気づけません。撤去・手続き・納骨先の3つに分けて見ます</li><li>離檀料に決まった額はありません。相場を知らずに言い値で払う方がいます</li><li>納骨先を決める前に撤去すると、遺骨の置き場所に困って二度手間になります。順番が大事です</li></ul></div>
-<ul class="facts"><li>総額の相場は35万〜150万円。差がつくのは上の3つです</li></ul><div class="cards" style="margin-top:12px"><div class="card"><b>① 墓石の撤去・整地</b><div class="range">90×90cmで9.9万円〜・1㎡あたり10万〜12万円〜</div><div class="note">区画の広さ・墓石の大きさ・重機が入るかで変わる。ここが見積の大半。県内の石材店の下限価格の例です</div></div><div class="card"><b>② 手続き（改葬許可・お寺への連絡）</b><div class="range">数千円〜。離檀料は寺による</div><div class="note">改葬許可証は市町村役場で。お寺には先に相談を。離檀料は法律で決まった額はない</div></div><div class="card"><b>③ 新しい納骨先</b><div class="range">樹木葬は平均約70万円・合祀型の永代供養墓は数万円〜</div><div class="note">鎌倉新書の2026年の調査で樹木葬の平均購入金額は71.7万円。ここを先に決めないと総額が決まらない。実家の近くか、今お住まいの近くか</div></div></div>
+<div class="money-lead"><p>先に内訳を知っておくと、損をしません</p><ul><li>「一式」の見積は、相場より高くても気づけません。撤去・手続き・納骨先の3つに分けて見ます</li><li>離檀料に決まった額はありません。相場を知らずに言い値で払う方がいます</li><li>納骨先を決める前に撤去すると、遺骨の置き場所に困って二度手間になります。順番が大事です</li></ul></div>
+<div class="cmp"><p class="cmp-t">同じお墓でも、頼み方で総額が変わります</p><p class="cmp-lead">1社に直接頼むと、「一式」の見積しか出ません。案内所は、撤去・手続き・納骨先に分けて、最大3社の見積で並べます。</p><div class="cmp-head"><span></span><span class="c1">1社に直接頼むと</span><span class="c2">案内所で並べると</span></div><div class="cmp-row"><div class="cmp-k">撤去費</div><p class="cmp-a"><i>1社に直接頼むと</i>「一式○○万円」。相場より高くても気づけない</p><p class="cmp-b"><i>案内所で並べると</i>㎡単価と内訳で、最大3社を並べて比べられます</p></div><div class="cmp-row"><div class="cmp-k">離檀料</div><p class="cmp-a"><i>1社に直接頼むと</i>決まった額がないまま、言い値で払う</p><p class="cmp-b"><i>案内所で並べると</i>相場と伝え方の例を先にお渡し。石材店が相談に同席することもできます</p></div><div class="cmp-row"><div class="cmp-k">納骨先</div><p class="cmp-a"><i>1社に直接頼むと</i>撤去してから探して、遺骨の置き場所に困る</p><p class="cmp-b"><i>案内所で並べると</i>先に納骨先の費用の幅を整理してから撤去。順番で無駄が出ません</p></div><div class="cmp-row"><div class="cmp-k">手続き</div><p class="cmp-a"><i>1社に直接頼むと</i>改葬許可やお寺への連絡を、自分で調べながら進める</p><p class="cmp-b"><i>案内所で並べると</i>手順を1枚にまとめ、石材店に任せられる範囲もお伝えします</p></div><p class="cmp-close">先に並べてから決める。それが、費用の面で損をしない順番です。</p></div><ul class="facts"><li>総額の相場は35万〜150万円。差がつくのは上の3つです</li></ul><div class="cards" style="margin-top:12px"><div class="card"><b>① 墓石の撤去・整地</b><div class="range">90×90cmで9.9万円〜・1㎡あたり10万〜12万円〜</div><div class="note">区画の広さ・墓石の大きさ・重機が入るかで変わる。ここが見積の大半。県内の石材店の下限価格の例です</div></div><div class="card"><b>② 手続き（改葬許可・お寺への連絡）</b><div class="range">数千円〜。離檀料は寺による</div><div class="note">改葬許可証は市町村役場で。お寺には先に相談を。離檀料は法律で決まった額はない</div></div><div class="card"><b>③ 新しい納骨先</b><div class="range">樹木葬は平均約70万円・合祀型の永代供養墓は数万円〜</div><div class="note">鎌倉新書の2026年の調査で樹木葬の平均購入金額は71.7万円。ここを先に決めないと総額が決まらない。実家の近くか、今お住まいの近くか</div></div></div>
 <p class="note">金額は一般的な目安です。実際の費用は現地の見積で確定します。</p>
 </section>
 
