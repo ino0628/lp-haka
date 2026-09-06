@@ -37,13 +37,14 @@ h2{font-size:19px;margin:0 0 12px;padding-left:10px;border-left:4px solid var(--
 .checks li::before{content:"✓";position:absolute;left:12px;top:9px;color:var(--accent);font-weight:700}
 .risk{padding-left:20px;margin:0 0 8px}
 .risk li{margin:6px 0}
-.relief{position:relative;background:linear-gradient(180deg,var(--soft) 0%,#fff 100%);border:1px solid var(--line);border-radius:16px;padding:30px 20px 22px;margin:36px 0 36px}
+.relief{position:relative;background:linear-gradient(180deg,var(--soft) 0%,#fff 100%);border:1px solid var(--line);border-radius:16px;padding:28px 20px 22px;margin:0 0 36px}
 .relief h2 .t1{display:block;font-size:30px;color:var(--accent);margin-bottom:2px}
 .relief-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 16px 14px;margin:0 0 8px}
 .relief-box .relief-lead{margin:0 0 14px;font-size:16px}
 .relief-box .points li{background:var(--soft);border-color:transparent}
 .relief .relief-lead{font-size:16px;margin:0 0 16px}
-.bridge{position:absolute;top:-17px;left:50%;transform:translateX(-50%);margin:0;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 18px;font-size:14px;color:var(--ink);white-space:nowrap;box-shadow:0 3px 10px rgba(0,0,0,.06);max-width:calc(100% - 24px);overflow:hidden;text-overflow:ellipsis}
+.bridge{text-align:center;color:var(--sub);font-size:15px;margin:34px 0 14px;position:relative}
+.bridge::before{content:"";display:block;width:2px;height:26px;background:#e24b3b;opacity:.5;margin:0 auto 10px;border-radius:2px}
 .points{list-style:none;padding:0;margin:0 0 6px;display:grid;gap:10px}
 .points li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 46px;position:relative}
 .points li::before{content:"✓";position:absolute;left:14px;top:12px;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
@@ -176,8 +177,8 @@ body.has-sticky{padding-bottom:72px}
 <p class="risk-close">急がせるつもりはありません。ただ、順番だけは先に決めておくと安くなります。</p>
 </section>
 
+<p class="bridge">ここまで読んで、胸が重くなった方へ。</p>
 <section class="relief">
-
 <h2><span class="t1">大丈夫です。</span>墓じまいは、供養をやめることではありません。</h2>
 <div class="relief-box">
 <p class="relief-lead">守れる形に変えて、供養を続けるための手続きです。遠くて行けないまま無縁になるより、手の届く場所に移して、これからも手を合わせる。そう選んだ方は、2010年度の72,180件から2024年度の176,105件へ、この10年あまりで倍以上に増えています（政府統計・衛生行政報告例の改葬件数）。お寺への相談も手続きも、石材店が一緒に進めます。ひとりで抱える必要はありません。</p>
@@ -187,7 +188,7 @@ body.has-sticky{padding-bottom:72px}
 <div class="rescue"><p class="rescue-t">そうなる前に、無料で相談してみませんか。</p><a class="cta" href="#form">無料で見積を手配する</a><p class="note">紹介は無料・入力1分・断っても費用はかかりません・しつこい営業はしません</p></div>
 </section>
 
-<section class="trust"><h2>私たちは、石材店ではありません。だから、あなたの側に立てます。</h2><p class="lead">お墓を撤去する会社でも、納骨先を売る会社でもありません。あなたの事情を先に聞き、順番を決めて、新潟の石材店につなぐ窓口です。紹介したあとも、連絡が来たか、見積が説明どおりかを確認します。</p><h3>5つのお約束</h3><ol class="promises"><li><b>しつこい営業はさせません</b><span>対応する石材店と、営業電話を繰り返さない取り決めをしています。信頼できる実績のある石材店しか紹介しません。</span></li><li><b>見積は必ず明細で</b><span>撤去・整地・閉眼供養・運搬など、何にいくらかかるかが分かる形でお渡しします。「一式」だけの見積は受け取りません。</span></li><li><b>断っても、費用も理由もいりません</b><span>見積を見て合わなければ、そのまま断って構いません。当社への費用はかかりません。</span></li><li><b>見積は、最大3社から</b><span>どの石材店から連絡が来るかは、事前にお伝えします。それ以外から連絡が行くことはありません。</span></li><li><b>納骨が終わるまで、窓口は同じです</b><span>お寺への切り出し方の例文、改葬許可の書類、納骨先の選び方。分からないことは、いつでも聞いてください。</span></li></ol><h3>ご紹介する石材店の基準</h3><ul class="criteria"><li>新潟県内に拠点があり、お墓の場所をすぐ見に行ける</li><li>撤去だけでなく、閉眼供養の手配と改葬許可の書類の案内まで対応する</li><li>明細のある見積を出す。追加費用は事前に説明する</li><li>「しつこい営業をしない」「断られたら連絡しない」の取り決めに同意している</li></ul><h3>事務局より</h3><div class="message"><p>お墓の話は、費用より先に、気持ちの整理が要ります。「申し訳ない」という気持ちのまま何年も止まってしまう方が、いちばん多い。</p><p>墓じまいは、供養をやめることではなく、手の届く場所で続けるための引っ越しです。お寺にどう言うか、遺骨をどこへ移すか、いくらかかるか。順番を一緒に決めて、地元の石材店につなぎ、納骨が終わるまで同じ窓口でお付き合いします。</p><p class="sign">くらしの案内所事務局</p></div></section>
+<section class="trust"><h2>私たちは、石材店ではありません。だから、あなたの側に立てます。</h2><p class="lead">信頼できる石材店に、大切なお客様をつなぐ窓口です。</p><h3>5つのお約束</h3><ol class="promises"><li><b>しつこい営業はさせません</b><span>対応する石材店と、営業電話を繰り返さない取り決めをしています。信頼できる実績のある石材店しか紹介しません。</span></li><li><b>見積は必ず明細で</b><span>撤去・整地・閉眼供養・運搬など、何にいくらかかるかが分かる形でお渡しします。「一式」だけの見積は受け取りません。</span></li><li><b>断っても、費用も理由もいりません</b><span>見積を見て合わなければ、そのまま断って構いません。当社への費用はかかりません。</span></li><li><b>見積は、最大3社から</b><span>どの石材店から連絡が来るかは、事前にお伝えします。それ以外から連絡が行くことはありません。</span></li><li><b>納骨が終わるまで、窓口は同じです</b><span>お寺への切り出し方の例文、改葬許可の書類、納骨先の選び方。分からないことは、いつでも聞いてください。</span></li></ol><h3>ご紹介する石材店の基準</h3><ul class="criteria"><li>新潟県内に拠点があり、お墓の場所をすぐ見に行ける</li><li>撤去だけでなく、閉眼供養の手配と改葬許可の書類の案内まで対応する</li><li>明細のある見積を出す。追加費用は事前に説明する</li><li>「しつこい営業をしない」「断られたら連絡しない」の取り決めに同意している</li></ul><h3>事務局より</h3><div class="message"><p>お墓の話は、費用より先に、気持ちの整理が要ります。「申し訳ない」という気持ちのまま何年も止まってしまう方が、いちばん多い。</p><p>墓じまいは、供養をやめることではなく、手の届く場所で続けるための引っ越しです。お寺にどう言うか、遺骨をどこへ移すか、いくらかかるか。順番を一緒に決めて、地元の石材店につなぎ、納骨が終わるまで同じ窓口でお付き合いします。</p><p class="sign">くらしの案内所事務局</p></div></section>
 
 <div class="cta-inline"><a class="cta" href="#form">無料で見積を手配する</a></div>
 
