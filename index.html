@@ -44,6 +44,23 @@ h2{font-size:19px;margin:0 0 12px;padding-left:10px;border-left:4px solid var(--
 .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
 .card b{display:block;margin-bottom:4px}
 .range{font-size:22px;font-weight:700}
+.trust{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 18px;margin:6px 0}
+.trust h2{border:0;padding:0;font-size:21px;line-height:1.4}
+.trust .lead{margin:0 0 14px}
+.trust h3{font-size:15px;margin:18px 0 8px;color:var(--sub)}
+.promises{list-style:none;padding:0;margin:0;display:grid;gap:8px;counter-reset:pr}
+.promises li{background:var(--soft);border-radius:10px;padding:12px 12px 12px 44px;position:relative}
+.promises li::before{counter-increment:pr;content:counter(pr);position:absolute;left:12px;top:11px;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.promises b{display:block;margin-bottom:2px}
+.promises span{font-size:14px;color:var(--sub)}
+.criteria{margin:0;padding-left:20px;font-size:15px}
+.criteria li{margin:4px 0}
+.message{border-left:4px solid var(--accent);padding:4px 0 4px 14px;margin:12px 0 0;font-size:15px}
+.message p{margin:0 0 8px}
+.message .sign{color:var(--sub);font-size:13px;margin:0}
+.money-lead{background:var(--soft);border-radius:10px;padding:12px 14px;margin:0 0 12px}
+.money-lead p{margin:0 0 6px;font-weight:700}
+.money-lead ul{margin:0;padding-left:20px;font-size:15px}
 .voices{display:grid;gap:12px}
 .voice{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
 .voice .av{flex:0 0 48px;width:48px;height:48px;border-radius:50%;background:#eef1f4;overflow:hidden}
@@ -131,6 +148,8 @@ body.has-sticky{padding-bottom:72px}
 
 </section>
 
+<section class="trust"><h2>私たちは、石材店ではありません。だから、あなたの側に立てます。</h2><p class="lead">くらしの案内所は、お墓を撤去する会社でも、納骨先を売る会社でもありません。あなたの事情を先に伺って、順番を一緒に決め、新潟の石材店に橋渡しをする窓口です。紹介して終わりではなく、連絡が来たか、見積が説明どおりか、断ったあとに連絡が止まったかまで確認します。</p><h3>5つのお約束</h3><ol class="promises"><li><b>しつこい営業はさせません</b><span>対応する石材店と、営業電話を繰り返さない取り決めをしています。止まらないときは当社が止めます。</span></li><li><b>見積は必ず明細で</b><span>撤去・整地・閉眼供養・運搬など、何にいくらかかるかが分かる形でお渡しします。「一式」だけの見積は受け取りません。</span></li><li><b>断っても、費用も理由もいりません</b><span>見積を見て合わなければ、そのまま断って構いません。当社への費用はかかりません。</span></li><li><b>情報を渡すのは、最大3社まで</b><span>石材店の名前は事前にお伝えします。同意なく他へ渡すことはありません。</span></li><li><b>納骨が終わるまで、窓口は同じです</b><span>お寺への切り出し方の例文、改葬許可の書類、納骨先の選び方。分からないことは、いつでも聞いてください。</span></li></ol><h3>ご紹介する石材店の基準</h3><ul class="criteria"><li>新潟県内に拠点があり、お墓の場所をすぐ見に行ける</li><li>撤去だけでなく、閉眼供養の手配と改葬許可の書類の案内まで対応する</li><li>明細のある見積を出す。追加費用は事前に説明する</li><li>「しつこい営業をしない」「断られたら連絡しない」の取り決めに同意している</li></ul><h3>事務局より</h3><div class="message"><p>お墓の話は、費用より先に、気持ちの整理が要ります。「申し訳ない」という気持ちのまま何年も止まってしまう方が、いちばん多い。</p><p>墓じまいは、供養をやめることではなく、手の届く場所で続けるための引っ越しです。お寺にどう言うか、遺骨をどこへ移すか、いくらかかるか。順番を一緒に決めて、地元の石材店につなぎ、納骨が終わるまで同じ窓口でお付き合いします。</p><p class="sign">くらしの案内所事務局</p></div></section>
+
 <section>
 <h2>墓じまい案内所でできること</h2>
 <div class="cards"><div class="card"><b>撤去から納骨先まで、まとめて相談できる石材店を手配</b><div class="note">墓石の撤去だけでなく、閉眼供養の手配、改葬許可の書類の案内、新しい納骨先の相談まで対応できる新潟県内の石材店をお渡しします。相談先を分けて探す必要がありません。</div></div><div class="card"><b>県外からでも、立会いなしで進む</b><div class="note">区画のサイズと写真で概算の見積ができます。現地に行けなくても進められ、立会いが要る場面は石材店から事前に相談があります。</div></div><div class="card"><b>相場と順番を先に見せる</b><div class="note">総額35万〜150万円の内訳と手順を先にお見せします。相場より高い見積に気づけます。紹介は無料、断っても費用はかかりません。</div></div></div>
@@ -138,6 +157,7 @@ body.has-sticky{padding-bottom:72px}
 
 <section>
 <h2>費用の内訳（差がつく3つ）</h2>
+<div class="money-lead"><p>先に内訳を知っておくと、避けられる損があります</p><ul><li>「一式」の見積は、相場より高くても気づけません。撤去・手続き・納骨先の3つに分けて見ます</li><li>離檀料に決まった額はありません。相場を知らずに言い値で払う方がいます</li><li>納骨先を決める前に撤去すると、遺骨の置き場所に困って二度手間になります。順番が大事です</li></ul></div>
 <ul class="facts"><li>総額の相場は35万〜150万円。差がつくのは上の3つです</li></ul><div class="cards" style="margin-top:12px"><div class="card"><b>① 墓石の撤去・整地</b><div class="range">90×90cmで9.9万円〜・1㎡あたり10万〜12万円〜</div><div class="note">区画の広さ・墓石の大きさ・重機が入るかで変わる。ここが見積の大半。県内の石材店の下限価格の例です</div></div><div class="card"><b>② 手続き（改葬許可・お寺への連絡）</b><div class="range">数千円〜。離檀料は寺による</div><div class="note">改葬許可証は市町村役場で。お寺には先に相談を。離檀料は法律で決まった額はない</div></div><div class="card"><b>③ 新しい納骨先</b><div class="range">樹木葬は平均約70万円・合祀型の永代供養墓は数万円〜</div><div class="note">鎌倉新書の2026年の調査で樹木葬の平均購入金額は71.7万円。ここを先に決めないと総額が決まらない。実家の近くか、今お住まいの近くか</div></div></div>
 <p class="note">金額は一般的な目安です。実際の費用は現地の見積で確定します。</p>
 </section>
