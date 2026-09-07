@@ -165,6 +165,7 @@ footer a{color:var(--sub)}
 <div class="sticky"><a href="https://haka.kurashi-annai.com/?src=guide_kaisou-kyokasho-torikata#form">無料で見積を手配する</a></div>
 <script>
 (function(){
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', arguments.callee); return; }
   if (typeof gtag !== 'function') return;
   var page = document.body.getAttribute('data-page') || 'lp';
   var sent = {};
