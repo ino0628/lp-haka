@@ -188,9 +188,99 @@ footer a{color:var(--sub)}
 .ui-reveal .card.in,.ui-reveal ol.steps li.in,.ui-reveal .checks li.in{opacity:1;transform:none}
 body.has-sticky{padding-bottom:72px}
 @media (min-width:600px){.cta-row{grid-template-columns:1fr 1fr}}
+
+/* ---- 視覚モード（visual:true） ---- */
+.v .wrap{max-width:880px}
+.v .hero{display:grid;gap:18px;padding:24px 0 16px}
+.v .hero-media{margin:0;border-radius:16px;overflow:hidden;background:var(--soft);aspect-ratio:16/10}
+.v .hero-media img{display:block;width:100%;height:100%;object-fit:cover}
+.v .hero h1{font-size:27px}
+@media (min-width:800px){.v .hero{grid-template-columns:1.15fr 1fr;align-items:center;padding:36px 0 26px}.v .hero-media{aspect-ratio:auto;height:100%;min-height:320px}.v .hero h1{font-size:34px}}
+.v .checks.two{grid-template-columns:1fr}
+@media (min-width:640px){.v .checks.two{grid-template-columns:1fr 1fr}}
+.v .checks li.ico{padding-left:52px}
+.v .checks li.ico::before{content:none}
+.v .checks li.ico .ic{position:absolute;left:12px;top:9px;width:28px;height:28px;color:var(--accent)}
+.ic{display:inline-block}
+.ic svg{width:100%;height:100%;display:block}
+.v .card{position:relative}
+.v .card>.ic{width:40px;height:40px;color:var(--accent);background:var(--soft);border-radius:10px;padding:8px;margin:0 0 10px}
+@media (min-width:640px){.v .cards.two{grid-template-columns:1fr 1fr}.v .cards.three{grid-template-columns:1fr 1fr 1fr}}
+.v .risk-card .ic{width:30px;height:30px;color:#b42318;margin:0 0 6px}
+figure.ph{margin:14px 0 0;border-radius:14px;overflow:hidden;background:var(--soft);border:1px solid var(--line)}
+figure.ph img{display:block;width:100%;height:auto}
+figure.ph figcaption{font-size:13px;color:var(--sub);padding:8px 12px;background:#fff;border-top:1px solid var(--line)}
+.sub-h{font-size:16px;margin:18px 0 8px;color:var(--ink)}
+.stepper{list-style:none;padding:0;margin:0;counter-reset:st;display:grid;gap:0}
+.stepper li{position:relative;padding:0 0 22px 58px;min-height:52px}
+.stepper li::before{counter-increment:st;content:counter(st);position:absolute;left:0;top:0;width:42px;height:42px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;z-index:1}
+.stepper li::after{content:"";position:absolute;left:20px;top:42px;bottom:0;width:2px;background:var(--line)}
+.stepper li:last-child::after{display:none}
+.stepper li>.ic{display:none}
+.stepper b{display:block;font-size:16px;margin:9px 0 2px}
+.stepper span{display:block;font-size:14px;color:var(--sub)}
+.stepper small{display:block;color:var(--sub);font-size:13px;margin-top:4px}
+@media (min-width:720px){.stepper{grid-template-columns:repeat(var(--n,3),1fr);gap:16px}.stepper li{padding:0 6px 0 0;text-align:center}.stepper li::before{position:static;margin:0 auto}.stepper li::after{left:calc(50% + 24px);right:calc(-50% + 24px);top:20px;bottom:auto;height:2px;width:auto}.stepper li>.ic{display:block;width:34px;height:34px;color:var(--accent);margin:10px auto 0}.stepper b{margin-top:6px}}
+.tl{display:grid;gap:8px;margin:10px 0 0;padding:0;list-style:none;counter-reset:tl}
+.tl li{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.tl li>.ic{width:34px;height:34px;color:var(--accent);background:var(--soft);border-radius:8px;padding:6px}
+.tl b{display:block;font-size:15px}
+.tl b::before{counter-increment:tl;content:counter(tl) ". ";color:var(--accent)}
+.tl span{display:block;font-size:13px;color:var(--sub)}
+@media (min-width:720px){.tl{grid-template-columns:repeat(var(--n,5),1fr)}.tl li{grid-template-columns:1fr;text-align:center;justify-items:center;padding:12px 8px}}
+.bk{margin:12px 0 0}
+.bk ol{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:10px}
+.bk li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.bk-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin:0 0 6px}
+.bk-h b{font-size:15px}
+.bk-h span{font-size:12px;color:var(--sub)}
+.bk-r{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.bk-t{display:block;height:16px;background:#eef1f4;border-radius:999px;overflow:hidden}
+.bk-t i{display:block;height:100%;border-radius:999px}
+.bk-a{font-size:15px;white-space:nowrap;color:var(--ink)}
+@media (min-width:720px){.bk li{display:grid;grid-template-columns:16em 1fr;gap:10px;align-items:center}.bk-h{margin:0;display:block}.bk-h span{display:block}}
+.factors{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:8px;grid-template-columns:1fr 1fr}
+.factors li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 8px;font-size:13px;text-align:center;line-height:1.5}
+.factors li>.ic{display:block;width:30px;height:30px;color:var(--accent);margin:0 auto 4px}
+@media (min-width:640px){.factors{grid-template-columns:repeat(4,1fr)}}
+.badges li.ico{display:inline-flex;align-items:center;gap:6px}
+.badges li>.ic{width:16px;height:16px;color:var(--accent)}
+.v .points{gap:10px}
+@media (min-width:640px){.v .points.two{grid-template-columns:1fr 1fr}}
+/* FV の段階式フォーム */
+.fvf{background:#fff;border:2px solid var(--accent);border-radius:14px;padding:14px 14px 12px;margin:14px 0 8px;box-shadow:0 8px 24px rgba(11,95,255,.10)}
+.fvf-t{margin:0 0 8px;font-weight:700;font-size:15px}
+.fvf-grid{display:grid;gap:8px}
+.fvf label{margin:0;font-size:13px;font-weight:700}
+.fvf-step{display:inline-block;background:var(--accent);color:#fff;font-size:11px;border-radius:999px;padding:1px 8px;margin:0 6px 4px 0;vertical-align:middle}
+.fvf select{margin-top:2px;padding:11px 10px;font-size:16px}
+.fvf-btn{width:100%;display:block;margin:12px 0 0;font-size:17px;padding:15px 16px;border:0;cursor:pointer}
+.fvf-note{margin:8px 0 0;text-align:center}
+@media (min-width:800px){.v .hero.has-fvf{grid-template-columns:1fr 1fr}}
+/* 関係図 */
+figure.rel{margin:14px 0 0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px}
+figure.rel svg{display:block;width:100%;height:auto}
+/* 補助金の帯 */
+.hojo{margin:16px 0 0;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.hojo-in{background:#14305e;background-image:repeating-conic-gradient(from 0deg at 50% 120%,rgba(255,255,255,.06) 0deg 6deg,transparent 6deg 12deg);color:#fff;padding:18px 16px;text-align:center;display:grid;gap:4px}
+.hojo-l{font-size:14px;font-weight:700;opacity:.95}
+.hojo-big{font-size:38px;font-weight:900;color:#ffd83d;line-height:1.1;letter-spacing:.01em}
+.hojo-s{font-size:12px;opacity:.9}
+.hojo-b{margin:0;padding:12px 14px 4px;font-size:15px}
+.hojo .note{padding:0 14px 12px;margin:0}
+@media (min-width:640px){.hojo-big{font-size:46px}}
+/* 金額つき事例 */
+.ex{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:8px}
+.ex li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;grid-template-columns:auto 1fr;gap:2px 12px;align-items:baseline}
+.ex b{font-size:20px;color:var(--accent);grid-row:1 / span 2;align-self:center;white-space:nowrap}
+.ex span{font-size:14px;font-weight:700}
+.ex em{font-style:normal;font-size:13px;color:var(--sub)}
+.ex small{grid-column:1 / -1;font-size:12px;color:var(--sub)}
+@media (min-width:640px){.ex{grid-template-columns:1fr 1fr}}
+
 </style>
 </head>
-<body data-page="lp" class="ui-shine ui-pulse">
+<body data-page="lp" class="ui-shine ui-pulse v">
 <script>
 (function(){
   if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', arguments.callee); return; }
@@ -218,24 +308,28 @@ body.has-sticky{padding-bottom:72px}
 <header><div class="wrap"><div class="brand"><span class="name">墓じまい案内所</span><a class="cta small" href="#form">無料で見積</a></div></div></header>
 
 <div class="wrap">
-<div class="hero">
+<div class="hero has-fvf">
+<div class="hero-text">
 <h1>墓じまいは撤去9.9万円〜。差がつくのは3つだけです。</h1>
 <p>お墓が遠くても、ご自身が県外でも手配できます。現地の立会いは不要。内訳と手順を先にお見せするので、相場より高い見積に気づけます。</p>
-<div class="cta-row"><a class="cta" href="#form">無料で見積を手配する</a></div>
-<ul class="badges"><li>紹介は無料</li><li>入力1分</li><li>全国対応・県外にお住まいでも</li></ul>
+<ul class="badges"><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span>紹介は無料</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>入力1分</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-6-6-11a6 6 0 0112 0c0 5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg></span>全国対応・県外にお住まいでも</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 8l8 8M16 8l-8 8"/></svg></span>石材店からの営業電話なし</li></ul>
+<form class="fvf" id="fvform" novalidate><p class="fvf-t">まず、お墓のことだけ教えてください（お名前などは次の画面で）</p><div class="fvf-grid"><label><span class="fvf-step">STEP1</span>お墓の種類<select name="grave_type"><option value="">選んでください</option><option>お寺の墓地</option><option>公営・民営の霊園</option><option>共同墓地・村墓地</option><option>分からない</option></select></label><label><span class="fvf-step">STEP2</span>新しい納骨先<select name="next_place"><option value="">選んでください</option><option>決まっている</option><option>永代供養墓を探している</option><option>樹木葬を探している</option><option>まだ決めていない</option></select></label><label><span class="fvf-step">STEP3</span>お墓のある都道府県<select name="pref"><option value="">選んでください</option><option>北海道</option><option>青森県</option><option>岩手県</option><option>宮城県</option><option>秋田県</option><option>山形県</option><option>福島県</option><option>茨城県</option><option>栃木県</option><option>群馬県</option><option>埼玉県</option><option>千葉県</option><option>東京都</option><option>神奈川県</option><option>新潟県</option><option>富山県</option><option>石川県</option><option>福井県</option><option>山梨県</option><option>長野県</option><option>岐阜県</option><option>静岡県</option><option>愛知県</option><option>三重県</option><option>滋賀県</option><option>京都府</option><option>大阪府</option><option>兵庫県</option><option>奈良県</option><option>和歌山県</option><option>鳥取県</option><option>島根県</option><option>岡山県</option><option>広島県</option><option>山口県</option><option>徳島県</option><option>香川県</option><option>愛媛県</option><option>高知県</option><option>福岡県</option><option>佐賀県</option><option>長崎県</option><option>熊本県</option><option>大分県</option><option>宮崎県</option><option>鹿児島県</option><option>沖縄県</option></select></label></div><button type="submit" class="cta fvf-btn" data-cta="fv_form">無料で見積を手配する（あと1分）</button><p class="note fvf-note">石材店からの営業電話はありません。断るときは、事務局が代わりに伝えます。</p></form>
 <p class="note">紹介は無料です。改葬許可の手続き代行は行いません（行政書士の業務です）。</p>
+</div>
+<figure class="hero-media"><img src="img/hero_jumokuso.jpg" alt="樹木葬の霊園（イメージ）" width="1344" height="768" srcset="img/hero_jumokuso-720.jpg 720w, img/hero_jumokuso.jpg 1400w" sizes="(max-width: 800px) 100vw, 880px" fetchpriority="high"></figure>
 </div>
 
 <section id="pain" data-sec="pain">
 <h2>こんなことで止まっていませんか</h2>
-<ul class="checks"><li>承継する人がいない</li><li>遠くて手入れに行けない</li><li>お寺にどう切り出せばいいか分からない</li><li>離檀料がいくら請求されるか怖い</li><li>遺骨の行き先が決まっていない</li><li>家族の意見がまとまらない</li></ul>
+<ul class="checks two"><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-4 3-6 6-6s6 2 6 6"/><path d="M15 20c0-3 1.5-5 4-5 1.5 0 3 1 3 3v2"/></svg></span>承継する人がいない</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-6-6-11a6 6 0 0112 0c0 5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg></span>遠くて手入れに行けない</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/><path d="M10 21v-3h4v3"/></svg></span>お寺にどう切り出せばいいか分からない</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l5 7 5-7"/><path d="M12 11v9"/><path d="M8 13h8"/><path d="M8 17h8"/></svg></span>離檀料がいくら請求されるか怖い</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span>遺骨の行き先が決まっていない</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M4 8h5l-2.5 6z"/><path d="M15 8h5l-2.5 6z"/><path d="M6.5 14a2.5 2.5 0 005 0M17.5 14a2.5 2.5 0 005 0" transform="translate(-2 0)"/></svg></span>家族の意見がまとまらない</li></ul>
+<figure class="ph"><img src="img/cemetery_old.jpg" alt="手入れが途絶えたお墓（イメージ）" width="1344" height="768" srcset="img/cemetery_old-720.jpg 720w, img/cemetery_old.jpg 1400w" sizes="(max-width: 800px) 100vw, 880px" loading="lazy" decoding="async"><figcaption>手入れが途絶えると、苔と落ち葉で覆われていきます（イメージ）</figcaption></figure>
 </section>
 
-<section class="risk-box" id="risk" data-sec="risk">
+<!--RISK--><section class="risk-box" id="risk" data-sec="risk">
 <h2>放っておくと、こうなります。</h2>
-<div class="risk-cards"><div class="risk-card"><div class="big">遺骨は合葬へ</div><b>「無縁墓」として撤去される</b><span>連絡が取れないまま管理料の滞納が続くと、官報と立札で1年公告したうえで墓地側が撤去し、遺骨は合葬墓へ移せる決まりです（墓地埋葬法の施行規則）。合葬されると、取り出せません。</span></div><div class="risk-card"><div class="big">5年で取消</div><b>管理料の滞納で使用権を失う</b><span>都立霊園は管理料を5年滞納すると使用許可が取り消されます（東京都霊園条例）。民営や寺院の墓地も、規約で同じ仕組みを持つところが多くあります。</span></div><div class="risk-card"><div class="big">毎年かかる</div><b>管理料と帰省の費用は止まらない</b><span>年間の管理料は数千円〜2万円ほど。お寺なら護持会費や寄付が加わります。年1回の帰省と掃除の交通費を足すと、10年で数十万円になります。</span></div><div class="risk-card"><div class="big">倒れたら責任</div><b>荒れた墓石が隣に倒れたら</b><span>地震や劣化で墓石が倒れ、隣のお墓や人に被害が出れば、使用者が責任を問われることがあります（民法の工作物責任）。</span></div><div class="risk-card"><div class="big">次の世代へ</div><b>決めないままだと、子や甥姪が背負う</b><span>何も決めないまま代が変わると、手続きも費用も、残った家族が知らない土地で背負います。承継する人がいないお墓ほど、決められるのは今だけです。</span></div></div>
+<div class="risk-cards"><div class="risk-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v4"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg></span><div class="big">遺骨は合葬へ</div><b>「無縁墓」として撤去される</b><span>連絡が取れないまま管理料の滞納が続くと、官報と立札で1年公告したうえで墓地側が撤去し、遺骨は合葬墓へ移せる決まりです（墓地埋葬法の施行規則）。合葬されると、取り出せません。</span></div><div class="risk-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4M16 3v4"/></svg></span><div class="big">5年で取消</div><b>管理料の滞納で使用権を失う</b><span>都立霊園は管理料を5年滞納すると使用許可が取り消されます（東京都霊園条例）。民営や寺院の墓地も、規約で同じ仕組みを持つところが多くあります。</span></div><div class="risk-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l5 7 5-7"/><path d="M12 11v9"/><path d="M8 13h8"/><path d="M8 17h8"/></svg></span><div class="big">毎年かかる</div><b>管理料と帰省の費用は止まらない</b><span>年間の管理料は数千円〜2万円ほど。お寺なら護持会費や寄付が加わります。年1回の帰省と掃除の交通費を足すと、10年で数十万円になります。</span></div><div class="risk-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 4l7 7"/><path d="M10 7l7 7"/><path d="M4 20l7-7"/><path d="M3 21h8"/></svg></span><div class="big">倒れたら責任</div><b>荒れた墓石が隣に倒れたら</b><span>地震や劣化で墓石が倒れ、隣のお墓や人に被害が出れば、使用者が責任を問われることがあります（民法の工作物責任）。</span></div><div class="risk-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-4 3-6 6-6s6 2 6 6"/><path d="M15 20c0-3 1.5-5 4-5 1.5 0 3 1 3 3v2"/></svg></span><div class="big">次の世代へ</div><b>決めないままだと、子や甥姪が背負う</b><span>何も決めないまま代が変わると、手続きも費用も、残った家族が知らない土地で背負います。承継する人がいないお墓ほど、決められるのは今だけです。</span></div></div>
 <p class="risk-close">急がせるつもりはありません。ただ、お墓の場合は、決められる人が年ごとに減っていきます。順番だけは、先に決めておいてください。</p>
-</section>
+</section><!--/RISK-->
 
 <p class="bridge">ここまで読んで、胸が重くなった方へ。</p>
 <section class="relief" id="relief" data-sec="relief">
@@ -245,6 +339,7 @@ body.has-sticky{padding-bottom:72px}
 
 <ul class="points"><li><b>お寺への切り出しは、一緒に</b><span>「遠方で管理が難しくなり、供養を続けられる形に変えたい」。伝え方の例文をお渡しし、石材店が相談に同席することもできます。</span></li><li><b>遠くても、立会いなしで</b><span>区画のサイズと写真で概算が出ます。現地に行けなくても進みます。</span></li><li><b>納骨先が決まっていなくても</b><span>永代供養・樹木葬・手元供養の費用の幅と選び方から、一緒に整理します。</span></li><li><b>家族の意見がまとまっていなくても</b><span>費用の内訳と手順を1枚にして、家族で共有できる形にします。</span></li></ul>
 </div>
+<figure class="rel"><svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="お客様と案内所と登録業者の関係図"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f6f4e"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a94a0"/></marker></defs><g><rect x="10" y="80" width="130" height="64" rx="12" fill="#2f6f4e"/><text x="75" y="119" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">あなた</text></g><g><rect x="260" y="56" width="180" height="112" rx="12" fill="#fff" stroke="#2f6f4e" stroke-width="2"/><text x="350" y="96" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2933">墓じまい案内所（事務局）</text><text x="350" y="124" text-anchor="middle" font-size="12" fill="#52606d">お墓のある地域の石材店に絞る</text><text x="350" y="146" text-anchor="middle" font-size="12" fill="#52606d">断りも値下げの相談も間に入る</text></g><g transform="translate(580,20)"><rect x="0" y="0" width="170" height="44" rx="8" fill="#fff" stroke="#cbd2d9"/><text x="85" y="28" text-anchor="middle" font-size="14" fill="#1f2933">石材店 A</text></g><g transform="translate(580,80)"><rect x="0" y="0" width="170" height="44" rx="8" fill="#fff" stroke="#cbd2d9"/><text x="85" y="28" text-anchor="middle" font-size="14" fill="#1f2933">石材店 B</text></g><g transform="translate(580,140)"><rect x="0" y="0" width="170" height="44" rx="8" fill="#fff" stroke="#cbd2d9"/><text x="85" y="28" text-anchor="middle" font-size="14" fill="#1f2933">石材店 C</text></g><path d="M144 96 H254" stroke="#2f6f4e" stroke-width="2.5" marker-end="url(#ah)"/><text x="199" y="86" text-anchor="middle" font-size="12" fill="#1f2933">相談を送る（1分）</text><path d="M254 130 H144" stroke="#8a94a0" stroke-width="2.5" marker-end="url(#ag)"/><text x="199" y="152" text-anchor="middle" font-size="12" fill="#52606d">比べて決める</text><path d="M444 96 H574" stroke="#2f6f4e" stroke-width="2.5" marker-end="url(#ah)"/><text x="509" y="86" text-anchor="middle" font-size="12" fill="#1f2933">最大3社を手配</text><path d="M574 130 H444" stroke="#8a94a0" stroke-width="2.5" marker-end="url(#ag)"/><text x="509" y="152" text-anchor="middle" font-size="12" fill="#52606d">内訳つきの見積</text><text x="380" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2933">石材店からあなたへ、営業の電話は行きません。断るときは、事務局が代わりに伝えます。</text></svg></figure><figure class="ph"><img src="img/temple.jpg" alt="お寺の境内（イメージ）" width="1344" height="768" srcset="img/temple-720.jpg 720w, img/temple.jpg 1400w" sizes="(max-width: 800px) 100vw, 880px" loading="lazy" decoding="async"><figcaption>お寺への相談は、伝え方の例文をお渡しし、石材店が同席することもできます（イメージ）</figcaption></figure>
 <div class="rescue"><p class="rescue-t">そうなる前に、無料で相談してみませんか。</p><a class="cta" href="#form">無料で見積を手配する</a><p class="note">紹介は無料・入力1分・断っても費用はかかりません・しつこい営業はしません</p></div>
 </section>
 
@@ -254,13 +349,14 @@ body.has-sticky{padding-bottom:72px}
 
 <section id="reasons" data-sec="reasons">
 <h2>墓じまい案内所でできること</h2>
-<div class="cards"><div class="card"><b>撤去から納骨先まで、まとめて相談できる石材店を手配</b><div class="note">墓石の撤去だけでなく、閉眼供養の手配、改葬許可の書類の案内、新しい納骨先の相談まで対応できるお墓のある地域の石材店をお渡しします。相談先を分けて探す必要がありません。</div></div><div class="card"><b>県外からでも、立会いなしで進む</b><div class="note">区画のサイズと写真で概算の見積ができます。現地に行けなくても進められ、立会いが要る場面は石材店から事前に相談があります。</div></div><div class="card"><b>相場と順番を先に見せる</b><div class="note">総額35万〜150万円の内訳と手順を先にお見せします。相場より高い見積に気づけます。紹介は無料、断っても費用はかかりません。</div></div></div>
+<div class="cards three"><div class="card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6l4 4-8 8-4-4z"/><path d="M6 14l-3 3 4 4 3-3"/><path d="M14 6l3-3 4 4-3 3"/></svg></span><b>撤去から納骨先まで、まとめて相談できる石材店を手配</b><div class="note">墓石の撤去だけでなく、閉眼供養の手配、改葬許可の書類の案内、新しい納骨先の相談まで対応できるお墓のある地域の石材店をお渡しします。相談先を分けて探す必要がありません。</div></div><div class="card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-6-6-11a6 6 0 0112 0c0 5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg></span><b>県外からでも、立会いなしで進む</b><div class="note">区画のサイズと写真で概算の見積ができます。現地に行けなくても進められ、立会いが要る場面は石材店から事前に相談があります。</div></div><div class="card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></svg></span><b>相場と順番を先に見せる</b><div class="note">総額35万〜150万円の内訳と手順を先にお見せします。相場より高い見積に気づけます。紹介は無料、断っても費用はかかりません。</div></div></div>
 </section>
 
 <section id="money" data-sec="money">
 <h2>費用の内訳（差がつく3つ）</h2>
 <div class="money-lead"><p>先に内訳を知っておくと、損をしません</p><ul><li>「一式」の見積は、相場より高くても気づけません。撤去・手続き・納骨先の3つに分けて見ます</li><li>離檀料に決まった額はありません。相場を知らずに言い値で払う方がいます</li><li>納骨先を決める前に撤去すると、遺骨の置き場所に困って二度手間になります。順番が大事です</li></ul></div>
-<div class="cmp"><p class="cmp-t">同じお墓でも、頼み方で総額が変わります</p><p class="cmp-lead">1社に直接頼むと、「一式」の見積しか出ません。案内所は、撤去・手続き・納骨先に分けて、最大3社の見積で並べます。</p><div class="cmp-head"><span></span><span class="c1">1社に直接頼むと</span><span class="c2">案内所で並べると</span></div><div class="cmp-row"><div class="cmp-k">撤去費</div><p class="cmp-a"><i>1社に直接頼むと</i>「一式○○万円」。相場より高くても気づけない</p><p class="cmp-b"><i>案内所で並べると</i>㎡単価と内訳で、最大3社を並べて比べられます</p></div><div class="cmp-row"><div class="cmp-k">離檀料</div><p class="cmp-a"><i>1社に直接頼むと</i>決まった額がないまま、言い値で払う</p><p class="cmp-b"><i>案内所で並べると</i>相場と伝え方の例を先にお渡し。石材店が相談に同席することもできます</p></div><div class="cmp-row"><div class="cmp-k">納骨先</div><p class="cmp-a"><i>1社に直接頼むと</i>撤去してから探して、遺骨の置き場所に困る</p><p class="cmp-b"><i>案内所で並べると</i>先に納骨先の費用の幅を整理してから撤去。順番で無駄が出ません</p></div><div class="cmp-row"><div class="cmp-k">手続き</div><p class="cmp-a"><i>1社に直接頼むと</i>改葬許可やお寺への連絡を、自分で調べながら進める</p><p class="cmp-b"><i>案内所で並べると</i>手順を1枚にまとめ、石材店に任せられる範囲もお伝えします</p></div><p class="cmp-close">先に並べてから決める。それが、費用の面で損をしない順番です。</p></div><ul class="facts"><li>総額の相場は35万〜150万円。差がつくのは上の3つです</li></ul><div class="cards" style="margin-top:12px"><div class="card"><b>① 墓石の撤去・整地</b><div class="range">90×90cmで9.9万円〜（新潟の石材店の例）・1㎡あたり10万〜15万円が目安</div><div class="note">区画の広さ・墓石の大きさ・重機が入るかで変わる。ここが見積の大半。価格を公開している石材店の下限の例です</div></div><div class="card"><b>② 手続き（改葬許可・お寺への連絡）</b><div class="range">役所の手数料は無料〜数百円。離檀料とお布施はお寺による</div><div class="note">改葬許可証は今のお墓がある市町村の役場で。お寺には先に相談を。離檀料に法律で決まった額はなく、3万〜20万円ほどが多い。閉眼供養のお布施は3万〜10万円ほど</div></div><div class="card"><b>③ 新しい納骨先</b><div class="range">樹木葬は平均約72万円・合祀型の永代供養墓は数万円〜</div><div class="note">鎌倉新書の調査（2026年）で樹木葬の平均購入金額は71.7万円。ここを先に決めないと総額が決まらない。実家の近くか、今お住まいの近くか</div></div></div>
+<div class="cmp"><p class="cmp-t">同じお墓でも、頼み方で総額が変わります</p><p class="cmp-lead">1社に直接頼むと、「一式」の見積しか出ません。案内所は、撤去・手続き・納骨先に分けて、最大3社の見積で並べます。</p><div class="cmp-head"><span></span><span class="c1">1社に直接頼むと</span><span class="c2">案内所で並べると</span></div><div class="cmp-row"><div class="cmp-k">撤去費</div><p class="cmp-a"><i>1社に直接頼むと</i>「一式○○万円」。相場より高くても気づけない</p><p class="cmp-b"><i>案内所で並べると</i>㎡単価と内訳で、最大3社を並べて比べられます</p></div><div class="cmp-row"><div class="cmp-k">離檀料</div><p class="cmp-a"><i>1社に直接頼むと</i>決まった額がないまま、言い値で払う</p><p class="cmp-b"><i>案内所で並べると</i>相場と伝え方の例を先にお渡し。石材店が相談に同席することもできます</p></div><div class="cmp-row"><div class="cmp-k">納骨先</div><p class="cmp-a"><i>1社に直接頼むと</i>撤去してから探して、遺骨の置き場所に困る</p><p class="cmp-b"><i>案内所で並べると</i>先に納骨先の費用の幅を整理してから撤去。順番で無駄が出ません</p></div><div class="cmp-row"><div class="cmp-k">手続き</div><p class="cmp-a"><i>1社に直接頼むと</i>改葬許可やお寺への連絡を、自分で調べながら進める</p><p class="cmp-b"><i>案内所で並べると</i>手順を1枚にまとめ、石材店に任せられる範囲もお伝えします</p></div><p class="cmp-close">先に並べてから決める。それが、費用の面で損をしない順番です。</p></div><ul class="facts"><li>総額の相場は35万〜150万円。差がつくのは、撤去・手続き・納骨先の3つです</li></ul><div class="cards" style="margin-top:12px"><div class="card"><b>① 墓石の撤去・整地</b><div class="range">90×90cmで9.9万円〜（新潟の石材店の例）・1㎡あたり10万〜15万円が目安</div><div class="note">区画の広さ・墓石の大きさ・重機が入るかで変わる。ここが見積の大半。価格を公開している石材店の下限の例です</div></div><div class="card"><b>② 手続き（改葬許可・お寺への連絡）</b><div class="range">役所の手数料は無料〜数百円。離檀料とお布施はお寺による</div><div class="note">改葬許可証は今のお墓がある市町村の役場で。お寺には先に相談を。離檀料に法律で決まった額はなく、3万〜20万円ほどが多い。閉眼供養のお布施は3万〜10万円ほど</div></div><div class="card"><b>③ 新しい納骨先</b><div class="range">樹木葬は平均約72万円・合祀型の永代供養墓は数万円〜</div><div class="note">鎌倉新書の調査（2026年）で樹木葬の平均購入金額は71.7万円。ここを先に決めないと総額が決まらない。実家の近くか、今お住まいの近くか</div></div></div>
+<div class="bk"><h3 class="sub-h">総額は、この5つに分かれます</h3><p>一般的なお墓（1〜3㎡）の目安。差がつくのは撤去・離檀料・納骨先の3つです。</p><ol><li><div class="bk-h"><b>墓石の撤去・整地</b><span>1㎡あたり10万〜15万円が目安。区画の広さと重機が入るかで決まる</span></div><div class="bk-r"><span class="bk-t"><i style="width:100%;background:#2f6f4e;opacity:1"></i></span><b class="bk-a">10万〜45万円</b></div></li><li><div class="bk-h"><b>新しい納骨先</b><span>合祀型の永代供養墓は数万円〜。樹木葬は平均71.7万円（鎌倉新書 2026年）</span></div><div class="bk-r"><span class="bk-t"><i style="width:89%;background:#2f6f4e;opacity:0.8"></i></span><b class="bk-a">数万〜70万円台</b></div></li><li><div class="bk-h"><b>離檀料</b><span>法律で決まった額はない。3万〜20万円ほどが多い。霊園なら不要</span></div><div class="bk-r"><span class="bk-t"><i style="width:33%;background:#2f6f4e;opacity:0.62"></i></span><b class="bk-a">0〜20万円</b></div></li><li><div class="bk-h"><b>閉眼供養のお布施</b><span>魂抜きの法要。お寺との関係で変わる</span></div><div class="bk-r"><span class="bk-t"><i style="width:18%;background:#2f6f4e;opacity:0.46"></i></span><b class="bk-a">3万〜10万円</b></div></li><li><div class="bk-h"><b>役所の手数料</b><span>改葬許可証（今のお墓がある市町村）</span></div><div class="bk-r"><span class="bk-t"><i style="width:2%;background:#2f6f4e;opacity:0.34"></i></span><b class="bk-a">無料〜数百円</b></div></li></ol><p class="note">金額は一般的な目安です。地域とお墓の状態で変わります。</p></div><h3 class="sub-h">見積が上がりやすい条件</h3><p>この条件に当てはまるときは、先に伝えておくと、後から足されません。</p><ul class="factors"><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="M6 20v-8M12 20v-8M18 20v-8"/><path d="M4 14h16M4 17h16"/></svg></span>区画が広い・墓石が大きい</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/><path d="M10 21v-3h4v3"/></svg></span>墓石や外柵が複数ある</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21l4-18h8l4 18"/><path d="M12 5v3M12 11v3M12 17v3"/></svg></span>山の墓地で、重機が入らない</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-4 9 4-9 4z"/><path d="M3 8v8l9 4 9-4V8"/><path d="M12 12v8"/></svg></span>遺骨（骨壺）の数が多い</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span>新しい納骨先が決まっていない</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-4 3-6 6-6s6 2 6 6"/><path d="M15 20c0-3 1.5-5 4-5 1.5 0 3 1 3 3v2"/></svg></span>複数のお寺にお墓がある</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-6-6-11a6 6 0 0112 0c0 5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg></span>遠方で、立会いが要る場面がある</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4M16 3v4"/></svg></span>お盆・彼岸の直前で日程が詰まる</li></ul><p class="note">撤去・離檀料・納骨先。この3つで、同じお墓の総額が数倍変わります。</p><figure class="ph"><img src="img/illust_tree.jpg" alt="樹木葬の霊園（イラスト）" width="1344" height="768" srcset="img/illust_tree-720.jpg 720w, img/illust_tree.jpg 1400w" sizes="(max-width: 800px) 100vw, 880px" loading="lazy" decoding="async"><figcaption>新しい納骨先を先に決めると、総額が決まります</figcaption></figure>
 <p class="note">金額は一般的な目安です。実際の費用は現地の見積で確定します。</p>
 </section>
 
@@ -273,8 +369,9 @@ body.has-sticky{padding-bottom:72px}
 
 <section id="flow" data-sec="flow">
 <h2>流れ（3つ）</h2>
-<ol class="steps"><li><b>フォームで相談する</b> 1分で入力。受付の控えがメールで届きます。</li><li><b>お墓のある地域の石材店から連絡が来る</b> 1〜2営業日を目安に。区画のサイズと写真で概算、必要なら現地で見積。お寺への相談の仕方、改葬許可の書類、納骨先の候補も石材店が案内します。</li><li><b>納得したら依頼する</b> 閉眼供養・撤去・納骨の日程は石材店とお寺で調整。見積を見て納得できなければ断って構いません。費用はかかりません。</li></ol>
+<ol class="stepper" style="--n:3"><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4l10-10-4-4L4 16z"/><path d="M12 8l4 4"/></svg></span><b>フォームで相談する</b><span>1分で入力。受付の控えがメールで届きます。</span></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-6-6-11a6 6 0 0112 0c0 5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg></span><b>お墓のある地域の石材店から連絡が来る</b><span>1〜2営業日を目安に。区画のサイズと写真で概算、必要なら現地で見積。お寺への相談の仕方、改葬許可の書類、納骨先の候補も石材店が案内します。</span></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M4 8h5l-2.5 6z"/><path d="M15 8h5l-2.5 6z"/><path d="M6.5 14a2.5 2.5 0 005 0M17.5 14a2.5 2.5 0 005 0" transform="translate(-2 0)"/></svg></span><b>納得したら依頼する</b><span>閉眼供養・撤去・納骨の日程は石材店とお寺で調整。見積を見て納得できなければ断って構いません。費用はかかりません。</span></li></ol>
 <p class="note"></p>
+<h3 class="sub-h">納骨まで、こう進みます</h3><p>お寺への相談から納骨まで、2〜3か月が目安。順番を間違えると、遺骨の置き場所に困ります。</p><ol class="tl" style="--n:6"><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/><path d="M10 21v-3h4v3"/></svg></span><div><b>お寺・管理者に相談</b><span>伝え方の例文をお渡し。石材店が同席することもできる</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l6 8h-4l4 6H6l4-6H6z"/><path d="M12 17v4"/></svg></span><div><b>新しい納骨先を決める</b><span>永代供養・樹木葬・納骨堂・手元供養。費用の幅から選ぶ</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 4l7 7"/><path d="M10 7l7 7"/><path d="M4 20l7-7"/><path d="M3 21h8"/></svg></span><div><b>改葬許可を申請</b><span>今のお墓がある市町村の役所へ。必要書類は石材店が案内（有償の代理は行政書士の業務）</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></svg></span><div><b>石材店の見積・契約</b><span>撤去・整地・運搬の内訳つきで、最大3社を比べる</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6l4 4-8 8-4-4z"/><path d="M6 14l-3 3 4 4 3-3"/><path d="M14 6l3-3 4 4-3 3"/></svg></span><div><b>閉眼供養・撤去・整地</b><span>お寺と石材店が日程を調整。遠方なら立会いなしも相談できる</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12l3 3a2 2 0 003 0l4-4"/><path d="M3 9l4-3 4 2 3-2 4 3"/><path d="M3 9v6l5 5"/><path d="M21 9v6l-5 5"/></svg></span><div><b>新しい納骨先へ納骨</b><span>改葬許可証を添えて納骨。ここで完了</span></div></li></ol><p class="note">期間は一般的な目安です。お寺の都合と納骨先の手配で変わります。</p><figure class="ph"><img src="img/nokotsudo.jpg" alt="納骨堂の内部（イメージ）" width="1344" height="768" srcset="img/nokotsudo-720.jpg 720w, img/nokotsudo.jpg 1400w" sizes="(max-width: 800px) 100vw, 880px" loading="lazy" decoding="async"><figcaption>新しい納骨先の例。納骨堂・永代供養墓・樹木葬から、手の届く形を選べます（イメージ）</figcaption></figure>
 </section>
 <div class="cta-inline"><a class="cta" href="#form">無料で見積を手配する</a></div>
 
@@ -299,7 +396,7 @@ body.has-sticky{padding-bottom:72px}
 <input type="hidden" name="gclid" value="">
 <input type="hidden" name="consent_at" value="">
 <div class="hp"><label>会社名<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
-<label>お墓の所在地（市町村まで） <span>必須</span></label><input type="text" name="place" required placeholder="例：新潟県長岡市">
+<label>お墓のある都道府県 <span>必須</span></label><select name="pref" required><option value="">選んでください</option><option>北海道</option><option>青森県</option><option>岩手県</option><option>宮城県</option><option>秋田県</option><option>山形県</option><option>福島県</option><option>茨城県</option><option>栃木県</option><option>群馬県</option><option>埼玉県</option><option>千葉県</option><option>東京都</option><option>神奈川県</option><option>新潟県</option><option>富山県</option><option>石川県</option><option>福井県</option><option>山梨県</option><option>長野県</option><option>岐阜県</option><option>静岡県</option><option>愛知県</option><option>三重県</option><option>滋賀県</option><option>京都府</option><option>大阪府</option><option>兵庫県</option><option>奈良県</option><option>和歌山県</option><option>鳥取県</option><option>島根県</option><option>岡山県</option><option>広島県</option><option>山口県</option><option>徳島県</option><option>香川県</option><option>愛媛県</option><option>高知県</option><option>福岡県</option><option>佐賀県</option><option>長崎県</option><option>熊本県</option><option>大分県</option><option>宮崎県</option><option>鹿児島県</option><option>沖縄県</option></select><label>市町村 <span>必須</span></label><input type="text" name="city" required placeholder="例：長岡市" autocomplete="address-level2"><input type="hidden" name="place" value="">
 <label>お名前 <span>必須</span></label>
 <input type="text" name="name" required autocomplete="name">
 <label>電話番号 <span>必須・折り返しのご連絡に使います</span></label>
@@ -337,6 +434,13 @@ window.LP_ENDPOINT = "https://script.google.com/macros/s/AKfycbyX9lsvDTMzTPzCo2D
   if (bar) { document.body.classList.add('has-sticky'); var hero = document.querySelector('.hero');
     function tick(){ var past = hero.getBoundingClientRect().bottom < 0; var atForm = form.getBoundingClientRect().top < window.innerHeight * 0.6; bar.classList.toggle('show', past && !atForm); }
     window.addEventListener('scroll', tick, {passive:true}); tick(); }
+  var fvf = document.getElementById('fvform');
+  if (fvf) { fvf.addEventListener('submit', function(e){ e.preventDefault();
+    var lead = document.getElementById('lead');
+    fvf.querySelectorAll('select').forEach(function(s){ if (!s.value) return; var t = lead.querySelector('[name="' + s.name + '"]'); if (t) t.value = s.value;
+      if (s.name === 'pref') { var p = lead.querySelector('input[type="text"][name="place"]'); if (p && p.value.indexOf(s.value) !== 0) p.value = s.value + (p.value || ''); } });
+    if (typeof gtag === 'function') gtag('event', 'cta_click', { location: 'fv_form', page_kind: 'lp' });
+    location.hash = '#form'; setTimeout(function(){ var n = lead.querySelector('[name="city"]') || lead.querySelector('[name="name"]'); if (n) n.focus({preventScroll:true}); }, 400); }); }
   if (document.body.classList.contains('ui-reveal') && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(es){ es.forEach(function(x){ if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }); }, {threshold: 0.15});
     document.querySelectorAll('.card, ol.steps li, .checks li').forEach(function(el){ io.observe(el); });
@@ -353,6 +457,8 @@ window.LP_ENDPOINT = "https://script.google.com/macros/s/AKfycbyX9lsvDTMzTPzCo2D
     ev.preventDefault(); err.style.display = 'none';
     if (f.company.value) return; // honeypot
     var place = f.querySelector('[name="place"]');
+    var pref = f.querySelector('select[name="pref"]'), city = f.querySelector('[name="city"]');
+    if (pref && city && place) { if (!pref.value || !city.value.trim()) { err.textContent = '都道府県と市区町村をご入力ください。'; err.style.display = 'block'; return; } place.value = pref.value + city.value.trim(); }
     if (!f.name.value.trim() || !f.tel.value.trim() || !f.email.value.trim() || (place && !place.value.trim())) { err.textContent = '必須の項目をご入力ください。'; err.style.display = 'block'; return; }
     if (!f.consent.checked) { err.textContent = '同意のチェックをお願いします。'; err.style.display = 'block'; return; }
     f.consent_at.value = new Date().toISOString();
