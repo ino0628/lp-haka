@@ -440,8 +440,8 @@ figure.ph figcaption{font-size:13px;color:var(--sub);padding:8px 12px;background
 <input type="text" name="name" required autocomplete="name">
 <label>電話番号 <span>必須・折り返しのご連絡に使います</span></label>
 <input type="tel" name="tel" required autocomplete="tel" inputmode="tel">
-<label>メールアドレス <span>必須・受付の控えをお送りします</span></label>
-<input type="email" name="email" required autocomplete="email">
+<label>メールアドレス <span>任意・受付の控えをお送りします</span></label>
+<input type="email" name="email" autocomplete="email">
 </div>
 <div class="fs"><div class="fs-h"><i>3</i>お墓のこと（任意・分かる範囲で）</div><label>お墓の種類 <span>任意</span></label><select name="grave_type"><option value="">選んでください</option><option>お寺の墓地</option><option>公営・民営の霊園</option><option>共同墓地・村墓地</option><option>分からない</option></select><label>お寺（管理者）への相談 <span>任意</span></label><select name="temple"><option value="">選んでください</option><option>まだで、切り出し方に不安がある</option><option>まだだが、問題はなさそう</option><option>済んでいる</option><option>お寺ではない（霊園・共同墓地）</option></select><label>新しい納骨先 <span>任意</span></label><select name="next_place"><option value="">選んでください</option><option>決まっている</option><option>永代供養墓を探している</option><option>樹木葬を探している</option><option>まだ決めていない</option></select><label>お住まい <span>任意</span></label><select name="living"><option value="">選んでください</option><option>お墓と同じ都道府県</option><option>お墓とは別の都道府県</option></select></div>
 <div class="fs"><div class="fs-h"><i>4</i>ご希望（任意）</div>
@@ -513,7 +513,7 @@ window.LP_ENDPOINT = "https://script.google.com/macros/s/AKfycbyX9lsvDTMzTPzCo2D
     var place = f.querySelector('[name="place"]');
     var pref = f.querySelector('select[name="pref"]'), city = f.querySelector('[name="city"]');
     if (pref && city && place) { if (!pref.value || !city.value.trim()) { err.textContent = '都道府県と市区町村をご入力ください。'; err.style.display = 'block'; return; } place.value = pref.value + city.value.trim(); }
-    if (!f.name.value.trim() || !f.tel.value.trim() || !f.email.value.trim() || (place && !place.value.trim())) { err.textContent = '必須の項目をご入力ください。'; err.style.display = 'block'; return; }
+    if (!f.name.value.trim() || !f.tel.value.trim() || (place && !place.value.trim())) { err.textContent = '必須の項目をご入力ください。'; err.style.display = 'block'; return; }
     if (!f.consent.checked) { err.textContent = '同意のチェックをお願いします。'; err.style.display = 'block'; return; }
     f.consent_at.value = new Date().toISOString();
     var data = {}; new FormData(f).forEach(function(v, k){ data[k] = v; });
